@@ -1,0 +1,80 @@
+// reate a user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Laelatul Hodijah",
+    "email": "admin@gmail.com",
+    "password": "admin",
+    "confPassword": "admin",
+    "role": "ADMIN"
+}
+
+###
+//get all users
+GET http://localhost:5000/users
+
+###
+//get singgle user
+GET http://localhost:5000/users/51e2e19f-5387-4dd4-988e-5d900e5f92a2
+
+###
+/ update
+PATCH  http://localhost:5000/users/51e2e19f-5387-4dd4-988e-5d900e5f92a2
+Content-Type: application/json
+
+{
+    "name": "Laelatul Hodijah",
+    "email": "admin@gmail.com",
+    "password": "admin",
+    "confPassword": "admin",
+    "role": "ADMIN"
+}
+
+###
+//get singgle user
+DELETE  http://localhost:5000/users/51e2e19f-5387-4dd4-988e-5d900e5f92a2
+
+###
+// login
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "admin"
+}
+
+###
+GET http://localhost:5000/me
+
+
+###
+ DELETE http://localhost:5000/logout
+
+
+###
+###
+ // Get all product
+GET http://localhost:5000/products
+
+
+###
+// login
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "Product 5",
+    "price": 927
+}
+
+###
+// login
+PATCH http://localhost:5000/products/d3a039e7-eb81-4191-a82a-15489c54ec67
+Content-Type: application/json
+
+{
+    "name": "Product Update",
+    "price": 920
+}
